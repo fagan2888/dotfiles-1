@@ -1,0 +1,76 @@
+cd
+cd .dotfiles/
+git init
+git add *
+git status
+ls
+cd .bash/
+ls
+ls
+git rm history
+git whatchanged 
+cd
+ls
+cd .dotfiles/
+ls
+git status
+cd .bash/
+ls
+rm history 
+vim env 
+ls
+cd ..
+vim .bashrc 
+ls
+ls
+cd .bash/
+ls
+vim env 
+cd ..
+ls
+ls
+git add .*
+git status
+git add .bash .bashrc .gvimrc .vim .vimoutlinerrc .vimrc
+cd .vim/
+dir
+git add ftplugin
+cd ..
+git status
+git add .bash
+git add .bashrc
+ls
+git add .
+cd .vim/undo/
+ls
+ls -al
+git status
+cd ..
+ls
+ls
+mv undo/ ~/.vim/
+mv backup/ ~/.vim/
+ls ~/.vim
+ls
+cd ..
+cd .bash/
+ls
+vim env 
+ls
+cd ..
+git add .
+git status
+touch README
+vim README 
+vim restore.py 
+ls -al
+vim restore.py 
+ls
+./restore.py 
+cd ..
+ls
+ls -a
+ls
+rm README 
+0
+ls
