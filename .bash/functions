@@ -1,4 +1,7 @@
 #!/bin/bash
+if [[ -f /usr/share/bash-completion/completions/pacman ]]; then
+    source /usr/share/bash-completion/completions/pacman
+fi
 function siterip {
     if [[ $# -ne 2 ]]; then
         echo "Usage: siterip SITE NAME"
@@ -122,6 +125,7 @@ complete -F _services service
 
 sync_clip() {
     rsync -av --del $HOME/music/ /media/Clip/MUSIC/
+#    rsync -av --ignore-existing --del $HOME/music/ /media/Clip/MUSIC/
 }
 
 engage() {

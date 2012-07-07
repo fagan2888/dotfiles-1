@@ -1,13 +1,13 @@
 " General
 let mapleader = ","
 set nocompatible
+set spell spelllang=en_us
 set encoding=utf-8
 set backspace=start,indent,eol
 set ruler
 set showcmd
 set noerrorbells
 set hidden
-set formatoptions+=arow
 set nowrap
 set autoread
 set directory=~/.vim/backup,/tmp
@@ -24,13 +24,13 @@ set gdefault
 " Tab
 set expandtab
 set autoindent
+set smartindent
 set smarttab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set shiftround
 set grepprg=ack
-let g:tex_flavor = "latex"
 " File and omnicomplete
 filetype plugin indent on
 syntax on
@@ -62,17 +62,18 @@ autocmd FileType python compiler pylint
 let g:pylint_onwrite = 0
 let g:pylint_cwindow = 0
 let g:miniBufExplModSelTarget = 1 
-"let g:pydiction_location = '/usr/share/pydiction/complete-dict'
-let g:vimwiki_list = [{'path': '~/documents/notes/'}]
+"let g:vimwiki_list = [{'path': '~/documents/notes/'}]
 let g:pyflakes_use_quickfix = 0
-let g:otl_bold_headers = 0
+let g:pydoc_cmd = 'pydoc2'
+let g:pep8_map = '<silent><leader>8'
 
 " Remapping
-nmap <silent><leader><leader>w :w<cr>
-nmap <silent><leader><leader>c :bd<cr>
+nmap <silent><leader>w :w<cr>
+nmap <silent><leader>c :bd<cr>
 nmap <silent><C-H> :bp<CR>
 nmap <silent><C-L> :bn<CR>
-imap ; :
-nmap <silent><C-_> :nohlsearch<CR>
-map <silent><leader><space> :nohlsearch<CR>
+nmap ; :
+nmap <silent><leader><space> :nohlsearch<CR>
+nmap <silent><leader><space> :nohlsearch<CR>
 nmap <silent><leader>e :NERDTreeToggle<CR>
+nmap <silent><leader>t :TlistToggle<cr>

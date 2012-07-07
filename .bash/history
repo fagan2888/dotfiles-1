@@ -1,76 +1,500 @@
+vim /home/oliver/.vim/ftplugin/dot.vim
+dot -tPDF cki_orgchart.dot -o cki_orgchart.pdf
+dot -tpdf cki_orgchart.dot -o cki_orgchart.pdf
+dot -Tpdf cki_orgchart.dot -o cki_orgchart.pdf
+okular cki_orgchart.pdf 
+okular cki_orgchart.pdf 
+dot --help
+dot -Tpng cki_flowchart.dot flowchart.png
+r
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart_.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+dot -Tpng cki_flowchart_2.dot -o flowchart.png
+ls
+vim cki_orgchart.dot
+vim cki_orgchart.dot
+vim cki_orgchart.dot
+vim cki_orgchart.dot
+ls
+neato -Tpng cki_orgchart.dot -o cki_orgchart.png 
+twopi -Tpng cki_orgchart.dot -o cki_orgchart.png 
+circo -Tpng cki_orgchart.dot -o cki_orgchart.png 
+fdp -Tpng cki_orgchart.dot -o cki_orgchart.png 
+dot -Tpng cki_orgchart.dot -o cki_orgchart.png 
+cd documents/cki_flowchart/
+ls
+vim cki_orgchart.dot 
+pacin chrome-pepper-flashplugin
+pacrm chrome-pepper-flashplugin 
+pacin chromium-pepper-flash
 cd
-cd .dotfiles/
-git init
-git add *
-git status
+rm -r .wine/
+pacin wine wine_gecko
+apcin winetricks
+pacin winetricks
+winetricks 
+wine iexplore
+wine iexplore
+winetricks 
+pacrm winetricks 
+pacsearch wine
+pacshow q4wine
+wine iexplore
 ls
-cd .bash/
+cd downloads/
 ls
-ls
-git rm history
-git whatchanged 
+wine Firefox\ Setup\ 13.0.1.exe 
+pacsearch wine
+pacsearch google chrome
+pacin google-chrome
+pacin openssl098
+pacrm google-chrome
+pacin wine wine_gecko zenity winetricks
+pacin mono
+rm -r ~/.wine
 cd
 ls
-cd .dotfiles/
+WINEARCH=win32 winecfg
+winetricks 
+pacrm wine
+rm -r ~/.wine/
+find | grep wine
+rm -r .local/share/wineprefixes/
+find | grep wine
+find | grep wine | egrep icons
+find 
+find | grep wine | egrep icons
+find | grep wine | grep -v  icons
+find | grep wine | grep -v  icons | xargs rm
+find | grep wine | grep -v  icons
+rm -r .local/share/applications/wine .config/menus/applications-merged/
+python
+workon headliner
+python2
+pacsearch sqlite3
+pacshow sqliteman
+pacin sqliteman
+sqliteman 
+ps a app
+ps
+ps a
+kill 5093
+ps a
+kill -9 5093
+ps a
 ls
-git status
-cd .bash/
+rm test.db 
 ls
-rm history 
-vim env 
+ls -sh
+ls -sh
+watch ls -sh 
 ls
+workon headliner
+python2
+python
+workon headliner
+cd code/headliner/
+python
+fg
+python2
+ls
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+ls
+watch ls -sh headliner_cache.db
+cd /tmp/
+ls
+touch index.html
+vim index.html 
+python -m httplib
+python -m http.server
+pacrm sqlman
+cd code/headliner/
+workon headliner
+python2
+ls
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+python2 app.py
+ls
+ls -sh
+watch ls -s
+watch ls -sh headliner_cache.*
+watch ls -sh headliner_cache.*
+ls
+workon headliner
+pytho2n
+python
+ps
+ps a
+kill -9 12774
+ps a
+kill -9 12938
+ps as
+ps ax
+kill -9 13244
+date +%m
+date +%M
+date +%m
+man date
+pacrm sqliteman 
+pacsearch kontact
+pacsearch kdepim
+pacsearch akonadi google
+pacshow akonadi-googledata
+pacin kamoso
+pacsearch kamoso
+pacin kamoso-git
+pacin kamoso
+cd /tmp/
+ls
+cd k
+cd kamoso/
+ls
+vim PKGBUILD 
+ls
+ls
+rm -r kamoso-git*
+makepkg 
 cd ..
-vim .bashrc 
+rm -r kamoso/
+packer -G kamoso
+cd kamoso/
 ls
+makepkg 
+pacorphan 
+kamoso
+cd ~/pictures/
 ls
-cd .bash/
+rm picture_*
+packer -G kamoso-git
+cd kamoso-git/
 ls
-vim env 
+vim PKGBUILD 
+pacorphan 
+fagin4714
+fagin4714
+pacorphan 
+pacup
+ping athwart.com
+ping google.com
+ping athwart.com
+pacup
+pacup-force 
+cd
+find | grep wine
+find | grep wine | grep -v icons
+pacshow wine
+pacshow wine | grep mono
+pacshow wine-wow64
+pacsearch wine
+pacsearch wine script
+pacshow winestuff
+pacshow winestuff
+cd .local/share/ic
+cd ../icons
+ls
+cd hicolor/
+ls
+find
 cd ..
-ls
-ls
-git add .*
-git status
-git add .bash .bashrc .gvimrc .vim .vimoutlinerrc .vimrc
-cd .vim/
-dir
-git add ftplugin
 cd ..
-git status
-git add .bash
-git add .bashrc
+rm -r icons/
 ls
-git add .
-cd .vim/undo/
+c
+cd
+cd
+find -name *wine*
+find -name *wine* -print0
+find -name *wine* -print0
+find -name *wine* -print0 | xargs -0 rm
+cd
 ls
-ls -al
-git status
-cd ..
+pacshow winetricks
+pacshow winetricks
+pacin wine wine_gecko wine-mono winetricks
+WINEARCH=win32 winecfg
+winetricks 
+winetricks
+winetricks 
+find wine
+find | grep wine
+find -type d -name *wine*
+rm -r .local/share/wineprefixes/ .local/share/applications/wine
+find | grep wine | grep -v icons
+find -name *wine*
+find -name *wine*
+mtr.google.com
+mtr google.com
+cd code/headliner/
 ls
+workon_headliner
+workon headliner
+python app.py
+pacshow java-runtime
+pacsearch java-runtime
+pacsearch sun java
+pacin jre
+pacrm icedtea-web kdebindings-kross-java 
+pacin jre
+pacrm jre
+pacsearch jre
+pacin jre6
+pacin jre
+pacrm jre6
+pacin jre
+pacshow flashplugin
+pacin jre6
+pacrm jre
+pacin openjdk
+pacsearch icedtea
+pacin icedtea-web
+mplayer tv:///
+pacup
+pacsearch blackjack
+pacsearch cards
+pacsearch 21
+pacsearch blackjack
+pacshow kdegames-lskat
+pacsearch vim snip
+cd
 ls
-mv undo/ ~/.vim/
-mv backup/ ~/.vim/
-ls ~/.vim
+cd .macromedia/
 ls
-cd ..
-cd .bash/
+cd Flash_Player/
 ls
-vim env 
+cd \#SharedObjects/
 ls
-cd ..
-git add .
-git status
-touch README
-vim README 
-vim restore.py 
-ls -al
-vim restore.py 
+cd Y8BMXKK8/
 ls
-./restore.py 
-cd ..
+cd ../..
+ls
+cd macromedia.com/
+ls
+cd support/flashplayer/sys/
+ls
+vim settings.sol 
+cd
+rm -r .macromedia/
+pacin v4l2upc
+pacin v4l2ucp
+v4l2ctrl 
+v4l2ucp 
+pacin v4l2vd
+cd
 ls
 ls -a
+vim .macromedia/Flash_Player/macromedia.com/support/flashplayer/sys/settings.sol 
 ls
-rm README 
-0
+cd .macromedia/
 ls
+cd Flash_Player/
+ls
+cd macromedia.com/support/flashplayer/
+ls
+cd s
+cd
+ls
+ls -al
+ls -a
+cd .local/
+ls
+cd ..
+ls
+cd .local/share/
+ls
+cd applications/
+ls
+cd
+ls
+find |grep flash
+cd .macromedia/Flash_Player/macromedia.com/support/flashplayer/
+ls
+cd sys/
+ls
+vim settings.sol 
+gvim settings.sol 
+ls
+cd
+ls
+pacsearch v4l2
+pacrm 
+python
+pacsearch card game
+cd code/
+ls
+vim blackjack
+mkdir blackjack
+cd blackjack/
+touch blackjack.py
+vim blackjack.py 
+pacsearch megami
+pacshow kcards
+pacsearch kdegames
+pacup-force 
+cd code/headliner/
+ls
+cd ../
+ls
+cd blackjack/
+ls
+vim blackjack.py 
+python
+okular cki_orgchart.png 
+cd documents/cki_flowchart/
+ls
+vim cki_orgchart.dot 
+ls
+vim cki_orgchart
+vim cki_orgchart_2.dot 
+ls
+rm cki_orgchart_2.*
+ls
+vim cki_orgchart.dot 
+ls
+dot -Tpng -ocki_orgchart.png cki_orgchart.dot 
+neato -Tpng -ocki_orgchart.png cki_orgchart.dot 
+circo -Tpng -ocki_orgchart.png cki_orgchart.dot 
+paclist graphviz bin
+twopi -Tpng -ocki_orgchart.png cki_orgchart.dot 
+lefty -Tpng -ocki_orgchart.png cki_orgchart.dot 
+lneato -Tpng -ocki_orgchart.png cki_orgchart.dot 
+dot -Tpng -ocki_orgchart.png cki_orgchart.dot 
+pacup-force 
+pacup-force 
+pacrm reflector 
+pacin reflector 
+pacrm reflector
+sudo rm /usr/lib/python3.2/site-packages/__pycache__/Reflector.cpython-32.pyc 
+pacin reflector
+pacup-for
+pacup-force
+mirrors
+sudo mirrors
+pacup-force 
+sudo mirrors
+pacsearch imgur
+pacin imgurbash
+imgurbash 
+ls
+cd downloads/
+ls
+imgurbash derecho.png 
+synclient VertTwoFingerScroll=0
+sudo vim /etc/X11/xorg.conf.d/10-synaptics.conf 
+pacsearch gnuplot
+gnuplot
+pacsearch httpie
+pacup-force 
+pacin python2-httpie
+pacorphan 
+pacrm v4l2ucp 
+pacsearch nethack
+pacin nethack-patch
+nethack 
+nethack 
+pacup-force 
+pacin gnuplot
+gnuplot
+pacsearch gnuplot
+pacin cueplot
+pacrm cueplot 
+gnuplot
+nethack 
+sudo vimdiff /etc/pam.d/login{,.pacnew}
+cd /etc/pam.d/
+sudo mv login.pacnew login
+pacup-force 
+cd he
+cd code/headliner/
+ls
+workon headliner
+python app.py
+cd videos/
+ls
+rm irmaLaDouce.avi 
+pacin ranger
+pacsearch snip
+pacsearch vim
+pacsearch vim replac
+pacsearch vim repl

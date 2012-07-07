@@ -6,4 +6,6 @@ highlight! link Pmenu Search
 highlight! link ColorColumn Search
 set guioptions-=m
 set guioptions-=T
+set guioptions-=L
+set guioptions-=r
 set guicursor+=a:blinkon0
