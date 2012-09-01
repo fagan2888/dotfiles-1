@@ -1,5 +1,6 @@
 " General
 let mapleader = ","
+
 set nocompatible
 set spell spelllang=en_us
 set encoding=utf-8
@@ -31,6 +32,7 @@ set tabstop=4
 set softtabstop=4
 set shiftround
 set grepprg=ack
+
 " File and omnicomplete
 filetype plugin indent on
 syntax on
@@ -45,6 +47,29 @@ set incsearch
 set ignorecase
 set smartcase
 
+
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+
+Bundle 'OceanBlack256'
+Bundle 'oceanblack.vim'
+Bundle 'The-NERD-Commenter'
+Bundle 'The-NERD-tree'
+Bundle 'pep8'
+Bundle 'neocomplcache'
+Bundle 'pyflakes.vim'
+Bundle 'pylint.vim'
+Bundle 'UltiSnips'
+Bundle 'pythonindent.vim'
+Bundle 'indentpython'
+
+
 " Appearance
 set background=dark
 colorscheme oceanblack256
@@ -53,19 +78,19 @@ highlight! link ModeMsg MoreMsg
 "highlight Pmenu ctermbg=238 gui=bold
 highlight! link Pmenu Search
 highlight! link ColorColumn Search
-
+highlight! link Spellbad IncSearch
 
 " Plugins
-"let g:proj_flags="imstbcg"
 let NERDTreeQuitOnOpen = 1
 autocmd FileType python compiler pylint
 let g:pylint_onwrite = 0
-let g:pylint_cwindow = 0
+let g:pylint_cwindow = 1
 let g:miniBufExplModSelTarget = 1 
-"let g:vimwiki_list = [{'path': '~/documents/notes/'}]
 let g:pyflakes_use_quickfix = 0
 let g:pydoc_cmd = 'pydoc2'
 let g:pep8_map = '<silent><leader>8'
+let g:neocomplcache_enable_at_startup = 1 
+let g:neocomplcache_enable_auto_select = 1 
 
 " Remapping
 nmap <silent><leader>w :w<cr>
@@ -74,6 +99,7 @@ nmap <silent><C-H> :bp<CR>
 nmap <silent><C-L> :bn<CR>
 nmap ; :
 nmap <silent><leader><space> :nohlsearch<CR>
-nmap <silent><leader><space> :nohlsearch<CR>
 nmap <silent><leader>e :NERDTreeToggle<CR>
 nmap <silent><leader>t :TlistToggle<cr>
+
+
