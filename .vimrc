@@ -48,26 +48,18 @@ set ignorecase
 set smartcase
 
 
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-
-Bundle 'OceanBlack256'
-Bundle 'oceanblack.vim'
-Bundle 'The-NERD-Commenter'
-Bundle 'The-NERD-tree'
-Bundle 'pep8'
-Bundle 'neocomplcache'
-Bundle 'pyflakes.vim'
-Bundle 'pylint.vim'
-Bundle 'UltiSnips'
-Bundle 'pythonindent.vim'
-Bundle 'indentpython'
+call pathogen#infect() 
+"Bundle 'OceanBlack256'
+"Bundle 'oceanblack.vim'
+"Bundle 'The-NERD-Commenter'
+"Bundle 'The-NERD-tree'
+"Bundle 'pep8'
+"Bundle 'neocomplcache'
+"Bundle 'pyflakes.vim'
+"Bundle 'pylint.vim'
+"Bundle 'UltiSnips'
+"Bundle 'pythonindent.vim'
+"Bundle 'indentpython'
 
 
 " Appearance
