@@ -49,17 +49,6 @@ set smartcase
 
 
 call pathogen#infect() 
-"Bundle 'OceanBlack256'
-"Bundle 'oceanblack.vim'
-"Bundle 'The-NERD-Commenter'
-"Bundle 'The-NERD-tree'
-"Bundle 'pep8'
-"Bundle 'neocomplcache'
-"Bundle 'pyflakes.vim'
-"Bundle 'pylint.vim'
-"Bundle 'UltiSnips'
-"Bundle 'pythonindent.vim'
-"Bundle 'indentpython'
 
 
 " Appearance
@@ -74,7 +63,7 @@ highlight! link Spellbad IncSearch
 
 " Plugins
 let NERDTreeQuitOnOpen = 1
-autocmd FileType python compiler pylint
+"autocmd FileType python compiler pylint
 let g:pylint_onwrite = 0
 let g:pylint_cwindow = 1
 let g:miniBufExplModSelTarget = 1 
