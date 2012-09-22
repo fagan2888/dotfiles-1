@@ -77,14 +77,17 @@ complete -F _available pacin
 complete -F _available pacshow
 complete -F _installed paclist
 
-aur_update() {
-    if [[ -z $(type -P packer) ]]; then
-        echo "Packer required"
+_require(){
+    if [[ -z $(type -P $1) ]]; then
+        echo "$1 required"
         return 0
     fi
-    if [[ -z $(type -P aurploader) ]]; then
-        pacin aurploader
-    fi
+
+}
+
+aur_update() {
+    _require packer
+    _require aurploader
     cd /tmp
     for i in $*; do
         packer -G $i
@@ -122,10 +125,21 @@ _services() {
 }
 complete -F _services service
 
+_sync_dir() {
+    _require rsync
+    rsync -avm --ignore-existing --del $1 $2
+}
 
 sync_clip() {
-    rsync -av --del $HOME/music/ /media/Clip/MUSIC/
-#    rsync -av --ignore-existing --del $HOME/music/ /media/Clip/MUSIC/
+    _require gpo
+    if [[ ! -d /media/Clip ]]; then
+        echo "Clip not mounted at /media/Clip"
+        return 1
+    fi
+    _sync_dir $HOME/music/ /media/Clip/MUSIC/
+    _sync_dir $HOME/audio/ /media/Clip/AUDIOBOOKS/
+    gpo sync
+
 }
 
 engage() {

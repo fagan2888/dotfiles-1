@@ -81,6 +81,6 @@ nmap <silent><C-L> :bn<CR>
 nmap ; :
 nmap <silent><leader><space> :nohlsearch<CR>
 nmap <silent><leader>e :NERDTreeToggle<CR>
-nmap <silent><leader>t :TlistToggle<cr>
+"nmap <silent><leader>t :TlistToggle<cr>
 
 
