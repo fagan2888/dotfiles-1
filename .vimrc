@@ -63,15 +63,14 @@ highlight! link Spellbad IncSearch
 
 " Plugins
 let NERDTreeQuitOnOpen = 1
-"autocmd FileType python compiler pylint
-let g:pylint_onwrite = 0
-let g:pylint_cwindow = 1
 let g:miniBufExplModSelTarget = 1 
-let g:pyflakes_use_quickfix = 0
 let g:pydoc_cmd = 'pydoc2'
 let g:pep8_map = '<silent><leader>8'
 let g:neocomplcache_enable_at_startup = 1 
 let g:neocomplcache_enable_auto_select = 1 
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=0
+let g:syntastic_quiet_warnings=1
 
 " Remapping
 nmap <silent><leader>w :w<cr>
