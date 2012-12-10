@@ -36,7 +36,7 @@ function pacup {
 }
 
 function pacup-force {
-    sudo $PACMAN -Syyu
+    sudo $PACMAN -Syyu --noconfirm --devel
 }
 
 function pacorphan {
@@ -100,30 +100,6 @@ aur_update() {
     done
     pacorphan
 }
-
-service() {
-    if [ -z "$1"  -o  -z "$2" ]; then
-        echo "Usage: service SERVICE start|stop|restart"
-        return 2
-    fi
-    if [ "$2" != "start" -a  "$2" != "stop" -a  "$2" != "restart" ]; then
-        echo "Usage: service SERVICE start|stop|restart"
-        return 2
-    fi
-    sudo /etc/rc.d/$1 $2
-}
-
-_services() {
-    local cur prev
-    _get_comp_words_by_ref cur prev
-    if [[ "$prev" == "service" ]]; then
-        complist=$(find /etc/rc.d/ -executable -type f | sed 's-/etc/rc.d/--')
-        COMPREPLY=($(compgen -W "$complist" -- "$cur"))
-    elif [[ -x "/etc/rc.d/$prev" ]]; then
-        COMPREPLY=($(compgen -W "start stop restart" -- "$cur"))
-    fi
-}
-complete -F _services service
 
 _sync_dir() {
     _require rsync
