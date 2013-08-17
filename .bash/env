@@ -5,7 +5,7 @@ shopt -s cdspell
 shopt -s histappend
 
 
-PS1="\[$bldcyn\][\[$bldwht\]\u\[$bldcyn\]]\[$bldwht\]\$\[$txtrst\] "
+PS1="$ "
 HISTFILE=$HOME/.bash/history
 if [[ -n "$(type -P packer)" ]]; then
     PACMAN="packer --noedit"
