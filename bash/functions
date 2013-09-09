@@ -24,7 +24,12 @@ function pacrm {
 }
 
 function pacsearch {
-    $PACMAN -Ss $@ | less 
+    if [[ -n "$(type -P unbuffer)" ]]; then
+        unbuffer $PACMAN -Ss $@ | less
+    else
+        echo "Install expect for color!"
+        $PACMAN -Ss $@ | less 
+    fi
 }
 
 function pacshow {
