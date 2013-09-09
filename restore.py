@@ -1,20 +1,20 @@
 #!/usr/bin/env python
-# encoding: utf-8
 
+import logging
 import os
 import sys
 
-IGNORE_DIRS = (".git")
-IGNORE_FILES = (".gitignore", "README")
+IGNORE_DIRS = ".git",
+IGNORE_FILES = ".gitignore", "README"
 
 def link(target, source):
-    print("Restoring from {0} to {1}".format(source, target))
+    logging.info("Restoring from {0} to {1}".format(source, target))
     if os.path.islink(target):
-        print("Deleting existing link")
+        logging.info("Deleting existing link")
         os.remove(target)
     if os.path.exists(target):
         backup = "{0}.bak".format(target)
-        print("Backing up existing {0} to {1}".format(target, backup))
+        logging.info("Backing up existing {0} to {1}".format(target, backup))
     os.symlink(source, target)
 
 def main():
@@ -27,11 +27,10 @@ def main():
         sourcename = os.path.join(source, name)
         if os.path.abspath(sourcename) == os.path.abspath(sys.argv[0]):
             continue #Don't Copy Self
-        targetname = os.path.join(target, name)
-        if os.path.isdir(sourcename) and name != ".git":
+        targetname = os.path.join(target, "." + name)
+        if os.path.isdir(sourcename) and name not in IGNORE_DIRS:
             link(targetname, sourcename)
-        elif os.path.isfile(sourcename) and name not in ["README",
-                ".gitignore"]:
+        elif os.path.isfile(sourcename) and name not in IGNORE_FILES:
             link(targetname, sourcename)
 
 if __name__=="__main__":
