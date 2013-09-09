@@ -1,5 +1,2 @@
 .bash/history
-.vim/backup/
-.vim/undo/
-.vim/.netrwhist
-*/.gvim/
+.bash/local
