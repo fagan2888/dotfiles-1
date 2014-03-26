@@ -11,7 +11,7 @@ function siterip {
         mkdir $2
     fi
     cd $2
-    wget -cpk -nc -nv -np -rl0 "$1"
+    wget -cpk -rl0 "$1"
     cd ..
 }
 
@@ -129,4 +129,13 @@ engage() {
     else
         echo "I cannae do it Captain! I just don't have the power! Also, install sox"
     fi
+}
+
+scratchpad() {
+    $(cd ~/code/scratchpad && notebook)
+}
+
+clean_root() {
+    pacorphan
+    sudo pacman -Sc
 }
