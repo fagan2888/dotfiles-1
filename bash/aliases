@@ -16,7 +16,7 @@ alias grub_regen='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias mplayer='mplayer -idx -framedrop'
 alias bedtime='sudo shutdown -hP +90'
 alias notebook='ipython notebook --pylab=inline'
-alias blogserve='(cd ~/code/blog/ && jekyll serve -w --drafts)'
+alias blogserve='(cd ~/code/blog/ && bundle exec jekyll serve -w --drafts)'
 alias vimroom='vim -c VimroomToggle'
 [[ -n "$(type -P vim)" ]] && alias view='vim -R'
 
