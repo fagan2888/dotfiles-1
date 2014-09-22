@@ -11,7 +11,7 @@ function siterip {
         mkdir $2
     fi
     cd $2
-    wget -cpk -rl0 "$1"
+    wget -pk -nc -rl0 "$1"
     cd ..
 }
 
@@ -132,10 +132,32 @@ engage() {
 }
 
 scratchpad() {
-    $(cd ~/code/scratchpad && notebook)
+    $(cd /tmp && notebook)
 }
 
 clean_root() {
     pacorphan
     sudo pacman -Sc
+}
+
+pyproj() {
+    if [[ -n $1 ]]; then
+        wget -O- https://github.com/pypa/sampleproject/archive/master.tar.gz | tar -xz
+        if [[ ! -d $1 ]]; then
+            mkdir $1;
+        fi
+        cp -r sampleproject-master/* $1
+        rm -r sampleproject-master
+    else
+        echo "USAGE: pyproj NAME"
+    fi
+}
+
+page(){
+    if [[ -n "$(type -P unbuffer)" ]]; then
+        unbuffer $@ | less
+    else
+        echo "Install expect for color!" 
+        $@ | less
+    fi
 }
