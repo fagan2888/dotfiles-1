@@ -2,21 +2,9 @@
 if [[ -f /usr/share/bash-completion/completions/pacman ]]; then
     source /usr/share/bash-completion/completions/pacman
 fi
-function siterip {
-    if [[ $# -ne 2 ]]; then
-        echo "Usage: siterip SITE NAME"
-        return 2
-    fi
-    if [[ ! -d $2 ]]; then
-        mkdir $2
-    fi
-    cd $2
-    wget -pk -nc -rl0 "$1"
-    cd ..
-}
 
 function pacin {
-    sudo $PACMAN -S $@
+    $PACMAN -S $@
 }
 
 function pacrm {
@@ -37,11 +25,11 @@ function pacshow {
 }
 
 function pacup {
-    sudo $PACMAN -Su --noconfirm
+    $PACMAN -Su --noconfirm
 }
 
 function pacup-force {
-    sudo $PACMAN -Syyu --noconfirm --devel
+    $PACMAN -Syyu --noconfirm --devel
 }
 
 function pacorphan {
@@ -104,23 +92,6 @@ aur_update() {
         rm -rf $i
     done
     pacorphan
-}
-
-_sync_dir() {
-    _require rsync
-    rsync -avm --ignore-existing --del $1 $2
-}
-
-sync_clip() {
-    _require gpo
-    if [[ ! -d /media/Clip ]]; then
-        echo "Clip not mounted at /media/Clip"
-        return 1
-    fi
-    _sync_dir $HOME/music/ /media/Clip/MUSIC/
-    _sync_dir $HOME/audio/ /media/Clip/AUDIOBOOKS/
-    gpo sync
-
 }
 
 engage() {

@@ -13,11 +13,8 @@ alias ps='ps --forest'
 alias serve='python -m http.server'
 alias pandoc='pandoc -S --normalize --latex-engine=xelatex'
 alias grub_regen='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias mplayer='mplayer -idx -framedrop'
-alias bedtime='sudo shutdown -hP +90'
-alias notebook='ipython notebook --pylab=inline'
-alias blogserve='(cd ~/code/blog/ && bundle exec jekyll serve -w --drafts)'
-alias vimroom='vim -c VimroomToggle'
+alias notebook='ipython notebook --browser=chromium'
+alias blogserve='cd ~/code/blog; bundle exec jekyll serve -w --drafts'
 [[ -n "$(type -P vim)" ]] && alias view='vim -R'
 
 if [[ -f /usr/share/bash-completion/completions/systemctl ]]; then
