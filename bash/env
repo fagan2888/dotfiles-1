@@ -1,4 +1,29 @@
 #!/bin/bash
+# Defaults
+export BROWSER=qutebrowser
+export EDITOR=vim
+export QT_STYLE_OVERRIDE=gtk
+export DATABASE_URL=postgres:///$(whoami)
+
+# Path
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cabal/bin
+if [[ -n "$(type -P ruby)" ]]; then
+    version="$(ruby --version | sed 's/ruby \([0-9\.]\{3\}\).*/\1.0/')"
+    export PATH=$PATH:$HOME/.gem/ruby/$version/bin
+fi
+
+# Configuration
+CONFIG=$HOME/.config 
+export IPYTHONDIR=$CONFIG/ipython
+export NETHACKDIR=$CONFIG/nethack
+export ELINKS_CONFDIR=$CONFIG/elinks
+export JUPYTER_CONFIG_DIR=$CONFIG/jupyter
+export NETHACKOPTIONS=$HOME/config/nethackrc
+
+# Cache
+export LESSHISTFILE=/dev/null
+
+# Bash-Specific
 
 set -o vi
 shopt -s cdspell
@@ -6,7 +31,6 @@ shopt -s histappend
 
 PS1="$ "
 HISTFILE=$HOME/.bash/history
-
 if [[ -n "$(type -P pacaur)" ]]; then
     PACMAN="pacaur --noedit --ignore-ood  --vsort --clean"
 elif [[ -n "$(type -P packer)" ]]; then
@@ -16,4 +40,7 @@ else
 fi
 if [[ "$TERM" = "xterm" ]]; then
     export TERM=xterm-256color
+fi
+if [[ -n "$(type -P ruby)" ]]; then
+    export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 fi
