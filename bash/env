@@ -25,6 +25,9 @@ export LESSHISTFILE=/dev/null
 
 # Bash-Specific
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 set -o vi
 shopt -s cdspell
 shopt -s histappend
