@@ -16,7 +16,7 @@ function pacsearch {
         unbuffer $PACMAN -Ss $@ | less
     else
         echo "Install expect for color!"
-        $PACMAN -Ss $@ | less 
+        $PACMAN -Ss $@ | less
     fi
 }
 
@@ -102,10 +102,6 @@ engage() {
     fi
 }
 
-scratchpad() {
-    $(cd /tmp && notebook)
-}
-
 clean_root() {
     pacorphan
     sudo pacman -Sc
@@ -128,7 +124,7 @@ page(){
     if [[ -n "$(type -P unbuffer)" ]]; then
         unbuffer $@ | less
     else
-        echo "Install expect for color!" 
+        echo "Install expect for color!"
         $@ | less
     fi
 }
