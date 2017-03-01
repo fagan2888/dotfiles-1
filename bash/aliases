@@ -14,6 +14,7 @@ alias serve='python -m http.server'
 alias pandoc='pandoc -S --normalize'
 alias grub_regen='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias scratchpad='jupyter notebook --browser=chromium'
+alias gvim='vim'
 [[ -n "$(type -P vim)" ]] && alias view='vim -R'
 
 if [[ -f /usr/share/bash-completion/completions/systemctl ]]; then
