@@ -8,14 +8,7 @@ import shutil
 
 from pathlib import Path
 
-IGNORES = (
-        '.git/',
-        '.gitignore',
-        'README',
-        'restore.py'
-        )
-
-RES = tuple(re.compile(i) for i in IGNORES)
+IGNORES = {'.git', '.gitignore', 'README', 'restore.py'}
 
 logging.basicConfig(level=logging.INFO)
 
@@ -39,7 +32,7 @@ def main():
     target = Path(os.environ['HOME']).resolve()
     source = Path(__file__).resolve().parent
     for subpath in source.iterdir():
-        if not any(pattern.search(str(subpath)) for pattern in RES):
+        if not subpath in IGNORES:
             link(target.joinpath('.' + subpath.name), subpath)
 
 
