@@ -1,4 +1,13 @@
 #!/bin/bash
+
+if [[ -n "$(type -P pacaur)" ]]; then
+    PACMAN="pacaur --noedit"
+elif [[ -n "$(type -P packer)" ]]; then
+    PACMAN="packer --noedit"
+else
+    PACMAN="sudo pacman"
+fi
+
 if [[ -f /usr/share/bash-completion/completions/pacman ]]; then
     source /usr/share/bash-completion/completions/pacman
 fi
@@ -25,11 +34,7 @@ function pacshow {
 }
 
 function pacup {
-    $PACMAN -Su --noconfirm
-}
-
-function pacup-force {
-    $PACMAN -Syyu --noconfirm --devel
+    $PACMAN -Syu --noconfirm --devel
 }
 
 function pacorphan {
@@ -70,61 +75,10 @@ complete -F _available pacin
 complete -F _available pacshow
 complete -F _installed paclist
 
-_require(){
-    if [[ -z $(type -P $1) ]]; then
-        echo "$1 required"
-        return 0
-    fi
-
-}
-
-aur_update() {
-    _require packer
-    _require aurploader
-    cd /tmp
-    for i in $*; do
-        packer -G $i
-        cd $i
-        /usr/bin/makepkg -s
-        makepkg --source
-        aurploader -k *.src.*
-        cd ..
-        rm -rf $i
-    done
-    pacorphan
-}
-
 engage() {
     if [[ -n "$(type -P play)" ]]; then
         play -n synth whitenoise band -n 100 24 band -n 300 100 gain +20
     else
         echo "I cannae do it Captain! I just don't have the power! Also, install sox"
-    fi
-}
-
-clean_root() {
-    pacorphan
-    sudo pacman -Sc
-}
-
-pyproj() {
-    if [[ -n $1 ]]; then
-        wget -O- https://github.com/pypa/sampleproject/archive/master.tar.gz | tar -xz
-        if [[ ! -d $1 ]]; then
-            mkdir $1;
-        fi
-        cp -r sampleproject-master/* $1
-        rm -r sampleproject-master
-    else
-        echo "USAGE: pyproj NAME"
-    fi
-}
-
-page(){
-    if [[ -n "$(type -P unbuffer)" ]]; then
-        unbuffer $@ | less
-    else
-        echo "Install expect for color!"
-        $@ | less
     fi
 }

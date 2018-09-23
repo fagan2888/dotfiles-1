@@ -2,11 +2,13 @@
 # ~/.bashrc
 #
 
-[[ -n "$(type -P virtualenvwrapper_lazy.sh)" ]] && source virtualenvwrapper_lazy.sh
-[[ -e ~/.bash/env ]] && . ~/.bash/env
+set -o vi
+shopt -s cdspell
+shopt -s histappend
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+PS1='$ '
+
+[[ "$TERM" = "xterm" ]] && export TERM=xterm-256color
 
 [[ -e ~/.bash/aliases ]] && . ~/.bash/aliases
 [[ -e ~/.bash/functions ]] && . ~/.bash/functions
