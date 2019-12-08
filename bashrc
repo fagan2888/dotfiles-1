@@ -5,6 +5,7 @@
 set -o vi
 shopt -s cdspell
 shopt -s histappend
+shopt -s globstar
 
 PS1='$ '
 
