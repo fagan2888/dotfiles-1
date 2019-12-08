@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if [[ -n "$(type -P pacaur)" ]]; then
+if [[ -n "$(type -P yay)" ]]; then
+    PACMAN="yay"
+elif [[ -n "$(type -P pacaur)" ]]; then
     PACMAN="pacaur --noedit"
 elif [[ -n "$(type -P packer)" ]]; then
     PACMAN="packer --noedit"
