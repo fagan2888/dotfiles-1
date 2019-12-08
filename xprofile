@@ -1,3 +1,6 @@
 #! /bin/bash
-[[ -e ~/.bash_profile ]] && . ~/.bash_profile
+export BROWSER=chromium
+export VDPAU_DRIVER=va_gl
+export QT_QPA_PLATFORMTHEME=gtk2
+
 setxkbmap -option caps:escape
